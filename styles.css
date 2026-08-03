@@ -1,0 +1,225 @@
+/*
+    Author: Daryl Hymel - darhym6254
+    Date: 08/02/2026
+    Purpose: Stylesheet for the Davikis Dice homepage prototype. It applies the
+             arcane workshop brand palette. Every text and background pair used
+             here was checked with the WebAIM Contrast Checker and clears the
+             4.5:1 minimum, with most pairs above 8:1.
+
+    BRAND PALETTE
+    #1A1526  Void Purple   page background
+    #2A2138  Cast Shadow   cards and panels
+    #F2EDE4  Parchment     primary text        15.27:1 on Void Purple
+    #E0B65C  Brass         accents and buttons  9.34:1 on Void Purple
+    #B9AEC4  Ash Violet    secondary text       8.41:1 on Void Purple
+*/
+
+/* Base page: dark ground with warm off white text */
+body {
+    background-color: #1A1526;
+    color: #F2EDE4;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* SITE HEADER */
+.site-header {
+    background-color: #2A2138;
+    padding: 20px 40px;
+    border-bottom: 2px solid #E0B65C;
+}
+
+.logo {
+    color: #E0B65C;
+    font-size: 26px;
+    letter-spacing: 4px;
+    margin: 0 0 10px 0;
+}
+
+.site-header nav a {
+    color: #F2EDE4;
+    text-decoration: none;
+    margin-right: 22px;
+    font-size: 15px;
+}
+
+.site-header nav a:hover {
+    color: #E0B65C;
+    text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 70px 40px;
+}
+
+.hero h1 {
+    color: #E0B65C;
+    font-size: 44px;
+    margin: 0 0 15px 0;
+}
+
+.tagline {
+    color: #B9AEC4;
+    font-size: 18px;
+    max-width: 620px;
+    margin: 0 auto 30px auto;
+}
+
+/* Shared button style: brass fill with dark text, 9.34:1 contrast */
+.button {
+    display: inline-block;
+    background-color: #E0B65C;
+    color: #1A1526;
+    padding: 12px 26px;
+    margin: 6px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #F2EDE4;
+}
+
+/* Outline version for the secondary action */
+.button-outline {
+    background-color: #1A1526;
+    color: #E0B65C;
+    border: 2px solid #E0B65C;
+}
+
+.button-outline:hover {
+    background-color: #2A2138;
+    color: #F2EDE4;
+}
+
+/* SECTIONS */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px 60px 40px;
+}
+
+h2 {
+    color: #E0B65C;
+    font-size: 30px;
+    border-bottom: 1px solid #B9AEC4;
+    padding-bottom: 10px;
+    margin-top: 55px;
+}
+
+/* Panels sit on the lighter surface color to separate them */
+.panel {
+    background-color: #2A2138;
+    padding: 25px 30px;
+    border-radius: 6px;
+    margin-top: 45px;
+}
+
+.panel h2 {
+    margin-top: 0;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #2A2138;
+    border-left: 4px solid #E0B65C;
+    border-radius: 6px;
+    padding: 18px;
+    width: 280px;
+}
+
+.product-image {
+    background-color: #1A1526;
+    color: #B9AEC4;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+
+.product-card h3 {
+    color: #F2EDE4;
+    margin: 0 0 6px 0;
+}
+
+.meta {
+    color: #B9AEC4;
+    font-size: 14px;
+    margin: 0 0 10px 0;
+}
+
+.price {
+    color: #E0B65C;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+}
+
+.stock {
+    color: #B9AEC4;
+    font-size: 14px;
+    margin: 0 0 14px 0;
+}
+
+/* ODD DICE LIST */
+.dice-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.dice-list li {
+    background-color: #1A1526;
+    color: #E0B65C;
+    border: 1px solid #B9AEC4;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
+/* COMMISSIONS */
+.slots {
+    color: #E0B65C;
+    font-weight: bold;
+}
+
+.steps {
+    color: #F2EDE4;
+    padding-left: 20px;
+}
+
+.steps h3 {
+    color: #E0B65C;
+    font-size: 18px;
+    margin: 14px 0 4px 0;
+}
+
+.steps p {
+    color: #B9AEC4;
+    margin: 0;
+}
+
+/* FOOTER */
+footer {
+    background-color: #2A2138;
+    border-top: 2px solid #E0B65C;
+    text-align: center;
+    padding: 22px;
+    color: #B9AEC4;
+    font-size: 14px;
+}

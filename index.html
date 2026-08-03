@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Author: Daryl Hymel - darhym6254
+        Date: 08/02/2026
+        Purpose: Homepage prototype for Davikis Dice, a handmade resin dice shop.
+                 This is the rough prototype created for the 1.9 Blueprints to
+                 Browsers project. It establishes the brand colors, the page
+                 structure, and the two main paths through the site: browsing
+                 the shop and requesting a commission.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davikis Dice | Handmade Resin Dice for Tabletop RPGs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- SITE HEADER: logo and main navigation -->
+<header class="site-header">
+    <p class="logo">DAVIKIS DICE</p>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#odd">Odd Dice</a>
+        <a href="#commissions">Commissions</a>
+        <a href="#about">About</a>
+        <a href="#cart">Cart</a>
+    </nav>
+</header>
+
+<!-- HERO: the main pitch and the two entry points into the site -->
+<section class="hero">
+    <h1>The dice nobody else casts</h1>
+    <p class="tagline">
+        Hand poured resin dice for tabletop RPGs. Standard seven piece sets,
+        single dice, and the odd shapes other shops will not make.
+    </p>
+    <p>
+        <a class="button" href="#shop">Shop the collection</a>
+        <a class="button button-outline" href="#commissions">Request a commission</a>
+    </p>
+</section>
+
+<main>
+
+    <!-- FEATURED PRODUCTS: sample of the shop grid -->
+    <section id="shop">
+        <h2>Featured Sets</h2>
+
+        <div class="product-grid">
+
+            <article class="product-card">
+                <div class="product-image">product photo</div>
+                <h3>Swamp Witch</h3>
+                <p class="meta">7 piece set &middot; sharp edge &middot; dried flowers</p>
+                <p class="price">$45.00</p>
+                <p class="stock">1 left &middot; one of a kind</p>
+                <a class="button" href="#cart">Add to cart</a>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">product photo</div>
+                <h3>Ember Core d24</h3>
+                <p class="meta">single die &middot; sharp edge &middot; copper flakes</p>
+                <p class="price">$8.00</p>
+                <p class="stock">Made to order</p>
+                <a class="button" href="#cart">Add to cart</a>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">product photo</div>
+                <h3>Grave Moss</h3>
+                <p class="meta">7 piece set &middot; soft edge &middot; green shimmer</p>
+                <p class="price">$25.00</p>
+                <p class="stock">4 in stock</p>
+                <a class="button" href="#cart">Add to cart</a>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ODD DICE: the thing that makes this shop different -->
+    <section id="odd" class="panel">
+        <h2>Dice For Systems Nobody Supports</h2>
+        <p>
+            Most shops stop at the standard seven. Davikis casts the rest, so
+            your homebrew table is not stuck rolling a d6 and doing math.
+        </p>
+        <ul class="dice-list">
+            <li>d2</li>
+            <li>d3</li>
+            <li>d5</li>
+            <li>d7</li>
+            <li>d14</li>
+            <li>d15</li>
+            <li>d16</li>
+            <li>d24</li>
+            <li>d30</li>
+        </ul>
+        <p><a class="button" href="#shop">Browse odd dice</a></p>
+    </section>
+
+    <!-- COMMISSIONS: the second path through the site -->
+    <section id="commissions" class="panel">
+        <h2>Commissions</h2>
+        <p class="slots">3 of 6 slots open for September</p>
+
+        <ol class="steps">
+            <li>
+                <h3>Tell us what you want</h3>
+                <p>Edge type, colors, inclusions, and which dice you need.</p>
+            </li>
+            <li>
+                <h3>Get a quote in 3 days</h3>
+                <p>We send a price and a rough concept image before anything is cast.</p>
+            </li>
+            <li>
+                <h3>Approve and receive</h3>
+                <p>Half up front, 3 to 4 weeks of work, photos before it ships.</p>
+            </li>
+        </ol>
+
+        <p><a class="button" href="#commissions">Start a request</a></p>
+    </section>
+
+    <!-- ABOUT: short maker story -->
+    <section id="about">
+        <h2>Made By Hand, One Pour At A Time</h2>
+        <p>
+            Every set is mixed, poured, cured, sanded through nine grits, and
+            inked by hand. No two sets come out identical, which is the point.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Davikis Dice</p>
+    <p>Prototype built for SDC260 Project 1.9 by Daryl Hymel</p>
+</footer>
+
+</body>
+</html>
