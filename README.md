@@ -13,14 +13,11 @@ polyhedrals almost nobody else casts, such as d2, d3, d5, d7, d14, d15, d16,
 d24, and d30. Those dice matter for homebrew rules and non D&D systems, and
 players currently have to go without them.
 
-The site has two jobs:
-
-1. **Sell what is in stock.** Many sets are one of a kind, so the site has to
-   show real stock counts and make it clear when something will never be made
-   again.
-2. **Take commissions.** Custom sets are made to order with only six slots a
-   month, so the site has to show remaining capacity, collect a detailed
-   request, and switch to a waitlist when the month is full.
+Because everything is made by hand, stock is small and many sets are one of a
+kind. The site has to show real inventory counts and make it clear when a set
+will never be made again, since that scarcity is a large part of why someone
+buys. Single odd dice are cast on demand, so those stay buyable at zero stock
+and simply ship later.
 
 ## Brand Palette
 
@@ -37,20 +34,21 @@ Checker and clears the 4.5:1 minimum.
 
 ## Site Map
 
-Seven pages, with two paths through them.
+Six pages, arranged around a single path from landing to order.
 
 ```
 Home
  |
- |-- Shop ------------- Product Detail --- Cart --- Checkout
- |
- |-- Commissions ------ Request Form ----- Quote --- Checkout
+ |-- Shop --- Product Detail --- Cart --- Checkout
  |
  |-- About / Process
 ```
 
-- **Browse and buy:** Home > Shop > Product Detail > Cart > Checkout
-- **Commission:** Home > Commissions > Request Form > quote by email > deposit > Checkout
+**Path:** Home > Shop > Product Detail > Cart > Checkout
+
+Featured cards on the homepage link straight to a Product Detail page, so both
+routes converge on the same add to cart flow. About sits outside the path and is
+reachable from the header on every page.
 
 ## Feature Roadmap
 
@@ -74,19 +72,20 @@ Five weekly milestones matched to the SDC260 project schedule.
 | Move all styling into an external stylesheet | 1 hr |
 | Build the product grid with flexbox | 2 hrs |
 | Add mobile and tablet breakpoints | 3 hrs |
-| Style the commission panel and footer | 2 hrs |
+| Build and style the Product Detail page | 2 hrs |
 
-**Deliverable:** homepage works on phone, tablet, and desktop.
+**Deliverable:** homepage and product page work on phone, tablet, and desktop.
 
-### Week 3 — Interactivity (due August 16, 2026)
+### Week 3 — Shop Interactivity (due August 16, 2026)
 
 | Task | Est. |
 |---|---|
-| Filter the shop by edge type, dice type, and price | 4 hrs |
-| Validate the commission request form | 3 hrs |
-| Show or hide the waitlist message based on slots left | 1 hr |
+| Filter the shop by dice type and edge | 4 hrs |
+| Sort products by price and by newest | 2 hrs |
+| Add a search box that matches on product name | 2 hrs |
+| Show a sold out badge when stock reaches zero | 1 hr |
 
-**Deliverable:** the shop and commission form respond to user input.
+**Deliverable:** visitors can narrow a growing catalog down to what they want.
 
 ### Week 4 — Cart and Storage (due August 23, 2026)
 
@@ -103,7 +102,7 @@ Five weekly milestones matched to the SDC260 project schedule.
 
 | Task | Est. |
 |---|---|
-| Build the commission slot counter | 2 hrs |
+| Build the order confirmation page | 2 hrs |
 | Accessibility pass, including contrast and keyboard navigation | 2 hrs |
 | Test every page in two browsers | 2 hrs |
 | Fix bugs and deploy | 3 hrs |

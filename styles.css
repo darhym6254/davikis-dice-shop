@@ -192,28 +192,6 @@ h2 {
     font-size: 16px;
 }
 
-/* COMMISSIONS */
-.slots {
-    color: #E0B65C;
-    font-weight: bold;
-}
-
-.steps {
-    color: #F2EDE4;
-    padding-left: 20px;
-}
-
-.steps h3 {
-    color: #E0B65C;
-    font-size: 18px;
-    margin: 14px 0 4px 0;
-}
-
-.steps p {
-    color: #B9AEC4;
-    margin: 0;
-}
-
 /* FOOTER */
 footer {
     background-color: #2A2138;
