@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Author: Daryl Hymel - darhym6254
+        Date: 08/05/2026
+        Purpose: Product Detail page for Davikis Dice, shown here with the Swamp
+                 Witch set. It presents the full product record from the proposal
+                 data model as a specification table and is the step between the
+                 Shop and the Cart on the buying path.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swamp Witch | Davikis Dice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <p class="logo">DAVIKIS DICE</p>
+    <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="shop.html#odd-dice">Odd Dice</a>
+        <a href="about.html">About</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+
+<main>
+
+    <p class="muted"><a href="shop.html">Back to Shop</a></p>
+
+    <article>
+
+        <h1>Swamp Witch</h1>
+        <p class="muted">Seven piece set &middot; sharp edge &middot; one of a kind</p>
+
+        <div class="detail-layout">
+
+            <figure class="detail-media">
+                <div class="detail-photo">product photo</div>
+                <figcaption class="muted">
+                    Deep green resin with real dried flowers suspended inside,
+                    inked in gold.
+                </figcaption>
+            </figure>
+
+            <div class="detail-info">
+                <p class="price">$45.00</p>
+                <p class="stock">1 left. This set will not be remade.</p>
+
+                <p>
+                    Poured in a single batch with flowers picked and dried last
+                    summer. Because the petals settle differently in every pour,
+                    this set could not be reproduced even if I tried.
+                </p>
+
+                <form>
+                    <label for="quantity">Quantity</label>
+                    <select id="quantity" name="quantity">
+                        <option>1</option>
+                    </select>
+                    <p><button class="button" type="submit">Add to cart</button></p>
+                </form>
+                <p class="muted">
+                    Only one is available, so the quantity list stops at one.
+                </p>
+            </div>
+
+        </div>
+
+        <section>
+            <h2 class="section-title">Specifications</h2>
+            <table class="spec-table">
+                <caption class="muted">Full product record for Swamp Witch</caption>
+                <tbody>
+                    <tr>
+                        <th scope="row">Product ID</th>
+                        <td>DD-SET-041</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Composition</th>
+                        <td>d4, d6, d8, d10, d%, d12, d20</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Edge</th>
+                        <td>Sharp</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Color scheme</th>
+                        <td>Deep green, gold</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Inclusions</th>
+                        <td>Real dried flowers</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ink color</th>
+                        <td>Gold</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">One of a kind</th>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Added</th>
+                        <td>July 18, 2026</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </article>
+
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 Davikis Dice</p>
+    <p>Handmade resin dice for tabletop RPGs</p>
+</footer>
+
+</body>
+</html>

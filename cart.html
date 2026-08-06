@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Author: Daryl Hymel - darhym6254
+        Date: 08/05/2026
+        Purpose: Cart page for Davikis Dice. It shows the items a visitor has
+                 chosen with a running subtotal before they continue to
+                 Checkout. The contents are placeholder rows for now, since
+                 storing a real cart is a week four item on the roadmap.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | Davikis Dice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <p class="logo">DAVIKIS DICE</p>
+    <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="shop.html#odd-dice">Odd Dice</a>
+        <a href="about.html">About</a>
+        <a class="current" href="cart.html">Cart</a>
+    </nav>
+</header>
+
+<main>
+
+    <h1>Your Cart</h1>
+
+    <section>
+        <div class="table-scroll">
+            <table class="cart-table">
+                <caption class="muted">Items currently in the cart</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Details</th>
+                        <th scope="col" class="numeric">Qty</th>
+                        <th scope="col" class="numeric">Price</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Swamp Witch</td>
+                        <td class="muted">7 piece set, sharp edge</td>
+                        <td class="numeric">1</td>
+                        <td class="numeric">$45.00</td>
+                    </tr>
+                    <tr>
+                        <td>Ember Core d24</td>
+                        <td class="muted">single die, made to order</td>
+                        <td class="numeric">2</td>
+                        <td class="numeric">$16.00</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Subtotal</td>
+                        <td class="numeric">$61.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Shipping</td>
+                        <td class="numeric">$6.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Total</td>
+                        <td class="numeric">$67.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <p>
+            <a class="button" href="checkout.html">Continue to checkout</a>
+            <a class="button button-outline" href="shop.html">Keep shopping</a>
+        </p>
+    </section>
+
+    <aside class="panel">
+        <h2>A note on made to order items</h2>
+        <p class="muted">
+            Anything marked made to order is cast after you buy it, so an order
+            containing one of those ships as a single parcel once every item is
+            ready. Ember Core d24 adds about a week.
+        </p>
+    </aside>
+
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 Davikis Dice</p>
+    <p>Handmade resin dice for tabletop RPGs</p>
+</footer>
+
+</body>
+</html>

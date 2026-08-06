@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Author: Daryl Hymel - darhym6254
+        Date: 08/05/2026
+        Purpose: Shop page for Davikis Dice. It lists the full catalog as product
+                 cards and holds the odd dice section. The filter controls are in
+                 place but are not wired up yet, since filtering is a week three
+                 item on the roadmap.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Davikis Dice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <p class="logo">DAVIKIS DICE</p>
+    <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a class="current" href="shop.html">Shop</a>
+        <a href="shop.html#odd-dice">Odd Dice</a>
+        <a href="about.html">About</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+
+<main>
+
+    <h1>Shop</h1>
+    <p class="muted">Every set is cast by hand. Stock counts are real.</p>
+
+    <section class="panel">
+        <h2>Filter</h2>
+        <form>
+            <label for="type">Type</label>
+            <select id="type" name="type">
+                <option>All</option>
+                <option>Seven piece sets</option>
+                <option>Single dice</option>
+                <option>Odd sided dice</option>
+            </select>
+
+            <label for="edge">Edge</label>
+            <select id="edge" name="edge">
+                <option>All</option>
+                <option>Sharp</option>
+                <option>Soft</option>
+            </select>
+
+            <label for="sort">Sort by</label>
+            <select id="sort" name="sort">
+                <option>Newest</option>
+                <option>Price, low to high</option>
+                <option>Price, high to low</option>
+            </select>
+
+            <p><button class="button" type="submit">Apply filters</button></p>
+        </form>
+        <p class="muted">Filtering is planned for the week three milestone.</p>
+    </section>
+
+    <section>
+        <h2 class="section-title">Seven Piece Sets</h2>
+
+        <div class="product-grid">
+
+            <article class="product-card">
+                <div class="product-image">product photo</div>
+                <h3>Swamp Witch</h3>
+                <p class="meta">sharp edge &middot; deep green and gold &middot; dried flowers</p>
+                <p class="price">$45.00</p>
+                <p class="stock">1 left &middot; one of a kind</p>
+                <a class="button" href="product.html">View details</a>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">product photo</div>
+                <h3>Grave Moss</h3>
+                <p class="meta">soft edge &middot; green shimmer</p>
+                <p class="price">$25.00</p>
+                <p class="stock">4 in stock</p>
+                <a class="button" href="product.html">View details</a>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">product photo</div>
+                <h3>Bottled Lightning</h3>
+                <p class="meta">sharp edge &middot; clear and violet &middot; silver flake</p>
+                <p class="price">$45.00</p>
+                <p class="stock">2 in stock</p>
+                <a class="button" href="product.html">View details</a>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">product photo</div>
+                <h3>Old Parchment</h3>
+                <p class="meta">soft edge &middot; cream and umber</p>
+                <p class="price">$25.00</p>
+                <p class="stock">6 in stock</p>
+                <a class="button" href="product.html">View details</a>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="odd-dice">
+        <h2 class="section-title">Odd Dice</h2>
+        <p class="muted">
+            The shapes almost nobody else casts. Cast to order, so these ship a
+            little later than stocked sets.
+        </p>
+
+        <ul class="dice-list">
+            <li>d2</li>
+            <li>d3</li>
+            <li>d5</li>
+            <li>d7</li>
+            <li>d14</li>
+            <li>d15</li>
+            <li>d16</li>
+            <li>d24</li>
+            <li>d30</li>
+        </ul>
+
+        <div class="product-grid">
+
+            <article class="product-card">
+                <div class="product-image">product photo</div>
+                <h3>Ember Core d24</h3>
+                <p class="meta">sharp edge &middot; translucent orange &middot; copper flakes</p>
+                <p class="price">$8.00</p>
+                <p class="stock">Made to order</p>
+                <a class="button" href="product.html">View details</a>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">product photo</div>
+                <h3>Hollow Bone d30</h3>
+                <p class="meta">soft edge &middot; bone white &middot; charcoal ink</p>
+                <p class="price">$8.00</p>
+                <p class="stock">Made to order</p>
+                <a class="button" href="product.html">View details</a>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">product photo</div>
+                <h3>Split Coin d2</h3>
+                <p class="meta">sharp edge &middot; black and brass</p>
+                <p class="price">$8.00</p>
+                <p class="stock">3 in stock</p>
+                <a class="button" href="product.html">View details</a>
+            </article>
+
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 Davikis Dice</p>
+    <p>Handmade resin dice for tabletop RPGs</p>
+</footer>
+
+</body>
+</html>

@@ -3,12 +3,10 @@
 <head>
     <!--
         Author: Daryl Hymel - darhym6254
-        Date: 08/02/2026
-        Purpose: Homepage prototype for Davikis Dice, a handmade resin dice shop.
-                 This is the rough prototype created for the 1.9 Blueprints to
-                 Browsers project. It establishes the brand colors, the page
-                 structure, and the path a visitor takes from the homepage into
-                 the shop.
+        Date: 08/05/2026
+        Purpose: Homepage for Davikis Dice. It introduces the shop, features
+                 three sets, and sends visitors into the Shop page, which is the
+                 first step of the buying path from the project site map.
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,19 +15,17 @@
 </head>
 <body>
 
-<!-- SITE HEADER: logo and main navigation -->
 <header class="site-header">
     <p class="logo">DAVIKIS DICE</p>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="#shop">Shop</a>
-        <a href="#odd">Odd Dice</a>
-        <a href="#about">About</a>
-        <a href="#cart">Cart</a>
+    <nav class="site-nav" aria-label="Main navigation">
+        <a class="current" href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="shop.html#odd-dice">Odd Dice</a>
+        <a href="about.html">About</a>
+        <a href="cart.html">Cart</a>
     </nav>
 </header>
 
-<!-- HERO: the main pitch and the two entry points into the site -->
 <section class="hero">
     <h1>The dice nobody else casts</h1>
     <p class="tagline">
@@ -37,16 +33,15 @@
         single dice, and the odd shapes other shops will not make.
     </p>
     <p>
-        <a class="button" href="#shop">Shop the collection</a>
-        <a class="button button-outline" href="#odd">See the odd dice</a>
+        <a class="button" href="shop.html">Shop the collection</a>
+        <a class="button button-outline" href="shop.html#odd-dice">See the odd dice</a>
     </p>
 </section>
 
 <main>
 
-    <!-- FEATURED PRODUCTS: sample of the shop grid -->
-    <section id="shop">
-        <h2>Featured Sets</h2>
+    <section>
+        <h2 class="section-title">Featured Sets</h2>
 
         <div class="product-grid">
 
@@ -56,16 +51,7 @@
                 <p class="meta">7 piece set &middot; sharp edge &middot; dried flowers</p>
                 <p class="price">$45.00</p>
                 <p class="stock">1 left &middot; one of a kind</p>
-                <a class="button" href="#cart">Add to cart</a>
-            </article>
-
-            <article class="product-card">
-                <div class="product-image">product photo</div>
-                <h3>Ember Core d24</h3>
-                <p class="meta">single die &middot; sharp edge &middot; copper flakes</p>
-                <p class="price">$8.00</p>
-                <p class="stock">Made to order</p>
-                <a class="button" href="#cart">Add to cart</a>
+                <a class="button" href="product.html">View details</a>
             </article>
 
             <article class="product-card">
@@ -74,47 +60,44 @@
                 <p class="meta">7 piece set &middot; soft edge &middot; green shimmer</p>
                 <p class="price">$25.00</p>
                 <p class="stock">4 in stock</p>
-                <a class="button" href="#cart">Add to cart</a>
+                <a class="button" href="product.html">View details</a>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">product photo</div>
+                <h3>Ember Core d24</h3>
+                <p class="meta">single die &middot; sharp edge &middot; copper flakes</p>
+                <p class="price">$8.00</p>
+                <p class="stock">Made to order</p>
+                <a class="button" href="product.html">View details</a>
             </article>
 
         </div>
     </section>
 
-    <!-- ODD DICE: the thing that makes this shop different -->
-    <section id="odd" class="panel">
-        <h2>Dice For Systems Nobody Supports</h2>
-        <p>
-            Most shops stop at the standard seven. Davikis casts the rest, so
-            your homebrew table is not stuck rolling a d6 and doing math.
+    <aside class="panel">
+        <h2>Why the odd dice matter</h2>
+        <p class="muted">
+            Most shops stop at the standard seven. Davikis casts the rest, so a
+            homebrew table is not stuck rolling a d6 and doing math.
         </p>
-        <ul class="dice-list">
-            <li>d2</li>
-            <li>d3</li>
-            <li>d5</li>
-            <li>d7</li>
-            <li>d14</li>
-            <li>d15</li>
-            <li>d16</li>
-            <li>d24</li>
-            <li>d30</li>
-        </ul>
-        <p><a class="button" href="#shop">Browse odd dice</a></p>
-    </section>
+        <p><a class="button button-outline" href="shop.html#odd-dice">Browse odd dice</a></p>
+    </aside>
 
-    <!-- ABOUT: short maker story -->
-    <section id="about">
-        <h2>Made By Hand, One Pour At A Time</h2>
-        <p>
+    <section>
+        <h2 class="section-title">Made By Hand, One Pour At A Time</h2>
+        <p class="muted">
             Every set is mixed, poured, cured, sanded through nine grits, and
             inked by hand. No two sets come out identical, which is the point.
         </p>
+        <p><a href="about.html">Read about the process</a></p>
     </section>
 
 </main>
 
-<footer>
+<footer class="site-footer">
     <p>&copy; 2026 Davikis Dice</p>
-    <p>Prototype built for SDC260 Project 1.9 by Daryl Hymel</p>
+    <p>Handmade resin dice for tabletop RPGs</p>
 </footer>
 
 </body>

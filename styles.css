@@ -1,130 +1,194 @@
 /*
     Author: Daryl Hymel - darhym6254
-    Date: 08/02/2026
-    Purpose: Stylesheet for the Davikis Dice homepage prototype. It applies the
-             arcane workshop brand palette. Every text and background pair used
-             here was checked with the WebAIM Contrast Checker and clears the
-             4.5:1 minimum, with most pairs above 8:1.
+    Date: 08/05/2026
+    Purpose: External stylesheet for the Davikis Dice store. It holds the arcane
+             workshop brand theme from the project proposal and the responsive
+             layout for all six pages. Written mobile first, so the base rules
+             are the phone layout and each media query adds room as the screen
+             grows.
 
-    BRAND PALETTE
+    BRAND PALETTE (from the 1.9 proposal, checked with WebAIM)
     #1A1526  Void Purple   page background
     #2A2138  Cast Shadow   cards and panels
     #F2EDE4  Parchment     primary text        15.27:1 on Void Purple
     #E0B65C  Brass         accents and buttons  9.34:1 on Void Purple
     #B9AEC4  Ash Violet    secondary text       8.41:1 on Void Purple
+
+    BREAKPOINTS
+    default   phones, single column
+    768px     tablets, two column product grid, horizontal nav
+    1024px    desktops, three column product grid, capped page width
 */
 
-/* Base page: dark ground with warm off white text */
-body {
-    background-color: #1A1526;
-    color: #F2EDE4;
-    font-family: Georgia, "Times New Roman", serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+/* ========================================
+   BRAND THEME VARIABLES
+======================================== */
+
+:root {
+    --void: #1A1526;
+    --shadow: #2A2138;
+    --parchment: #F2EDE4;
+    --brass: #E0B65C;
+    --ash: #B9AEC4;
 }
 
-/* SITE HEADER */
+/* ========================================
+   BASE PAGE (mobile first)
+======================================== */
+
+* {
+    box-sizing: border-box; /* Padding and border count inside a set width */
+}
+
+body {
+    margin: 0;
+    background-color: var(--void);
+    color: var(--parchment);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+}
+
+main {
+    padding: 20px 16px 50px 16px;
+}
+
+h1, h2, h3 {
+    color: var(--brass);
+    line-height: 1.25;
+}
+
+a {
+    color: var(--brass);
+}
+
+/* ========================================
+   SITE HEADER AND NAVIGATION
+   ----------------------------------------
+   On a phone the links stack into rows that wrap. From 768px they sit on one
+   line beside the logo.
+======================================== */
+
 .site-header {
-    background-color: #2A2138;
-    padding: 20px 40px;
-    border-bottom: 2px solid #E0B65C;
+    background-color: var(--shadow);
+    border-bottom: 2px solid var(--brass);
+    padding: 16px;
 }
 
 .logo {
-    color: #E0B65C;
-    font-size: 26px;
+    color: var(--brass);
+    font-size: 22px;
     letter-spacing: 4px;
     margin: 0 0 10px 0;
 }
 
-.site-header nav a {
-    color: #F2EDE4;
+.site-nav {
+    display: flex;
+    flex-wrap: wrap; /* Links drop to a new line rather than overflowing */
+    gap: 14px;
+}
+
+.site-nav a {
+    color: var(--parchment);
     text-decoration: none;
-    margin-right: 22px;
     font-size: 15px;
 }
 
-.site-header nav a:hover {
-    color: #E0B65C;
+.site-nav a:hover,
+.site-nav a:focus {
+    color: var(--brass);
     text-decoration: underline;
 }
 
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 70px 40px;
-}
-
-.hero h1 {
-    color: #E0B65C;
-    font-size: 44px;
-    margin: 0 0 15px 0;
-}
-
-.tagline {
-    color: #B9AEC4;
-    font-size: 18px;
-    max-width: 620px;
-    margin: 0 auto 30px auto;
-}
-
-/* Shared button style: brass fill with dark text, 9.34:1 contrast */
-.button {
-    display: inline-block;
-    background-color: #E0B65C;
-    color: #1A1526;
-    padding: 12px 26px;
-    margin: 6px;
-    border-radius: 4px;
-    text-decoration: none;
+.site-nav a.current {
+    color: var(--brass); /* Marks which page you are on */
     font-weight: bold;
 }
 
-.button:hover {
-    background-color: #F2EDE4;
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    text-align: center;
+    padding: 40px 16px;
 }
 
-/* Outline version for the secondary action */
-.button-outline {
-    background-color: #1A1526;
-    color: #E0B65C;
-    border: 2px solid #E0B65C;
-}
-
-.button-outline:hover {
-    background-color: #2A2138;
-    color: #F2EDE4;
-}
-
-/* SECTIONS */
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 40px 60px 40px;
-}
-
-h2 {
-    color: #E0B65C;
+.hero h1 {
     font-size: 30px;
-    border-bottom: 1px solid #B9AEC4;
-    padding-bottom: 10px;
-    margin-top: 55px;
+    margin: 0 0 12px 0;
 }
 
-/* Panels sit on the lighter surface color to separate them */
+.tagline {
+    color: var(--ash);
+    max-width: 620px;
+    margin: 0 auto 24px auto;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.button {
+    display: inline-block;
+    background-color: var(--brass);
+    color: var(--void);
+    padding: 12px 24px;
+    margin: 6px 4px;
+    border: 2px solid var(--brass);
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--parchment);
+    border-color: var(--parchment);
+}
+
+.button-outline {
+    background-color: transparent;
+    color: var(--brass);
+}
+
+.button-outline:hover,
+.button-outline:focus {
+    background-color: var(--shadow);
+    color: var(--parchment);
+    border-color: var(--parchment);
+}
+
+/* ========================================
+   PANELS AND SECTIONS
+======================================== */
+
 .panel {
-    background-color: #2A2138;
-    padding: 25px 30px;
+    background-color: var(--shadow);
     border-radius: 6px;
-    margin-top: 45px;
+    padding: 20px;
+    margin-bottom: 28px;
 }
 
-.panel h2 {
-    margin-top: 0;
+.section-title {
+    border-bottom: 1px solid var(--ash);
+    padding-bottom: 8px;
+    margin-top: 40px;
 }
 
-/* PRODUCT GRID */
+.muted {
+    color: var(--ash);
+}
+
+/* ========================================
+   PRODUCT GRID
+   ----------------------------------------
+   Flexbox as planned in the roadmap. Each card is allowed to grow and shrink
+   from a 260px base, and wrap carries the overflow onto the next line.
+======================================== */
+
 .product-grid {
     display: flex;
     flex-wrap: wrap;
@@ -132,49 +196,60 @@ h2 {
 }
 
 .product-card {
-    background-color: #2A2138;
-    border-left: 4px solid #E0B65C;
+    background-color: var(--shadow);
+    border-left: 4px solid var(--brass);
     border-radius: 6px;
-    padding: 18px;
-    width: 280px;
+    padding: 16px;
+    flex: 1 1 100%; /* One card per row on a phone */
+    display: flex;
+    flex-direction: column;
 }
 
 .product-image {
-    background-color: #1A1526;
-    color: #B9AEC4;
+    background-color: var(--void);
+    color: var(--ash);
     height: 150px;
-    line-height: 150px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 4px;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     font-size: 14px;
 }
 
 .product-card h3 {
-    color: #F2EDE4;
     margin: 0 0 6px 0;
+    color: var(--parchment);
+    font-size: 19px;
 }
 
 .meta {
-    color: #B9AEC4;
+    color: var(--ash);
     font-size: 14px;
     margin: 0 0 10px 0;
 }
 
 .price {
-    color: #E0B65C;
-    font-size: 22px;
+    color: var(--brass);
+    font-size: 21px;
     font-weight: bold;
     margin: 0 0 4px 0;
 }
 
 .stock {
-    color: #B9AEC4;
+    color: var(--ash);
     font-size: 14px;
     margin: 0 0 14px 0;
 }
 
-/* ODD DICE LIST */
+.product-card .button {
+    margin-top: auto; /* Pins the button to the bottom of every card */
+}
+
+/* ========================================
+   ODD DICE CHIPS
+======================================== */
+
 .dice-list {
     list-style: none;
     padding: 0;
@@ -184,20 +259,256 @@ h2 {
 }
 
 .dice-list li {
-    background-color: #1A1526;
-    color: #E0B65C;
-    border: 1px solid #B9AEC4;
+    background-color: var(--void);
+    color: var(--brass);
+    border: 1px solid var(--ash);
     border-radius: 4px;
     padding: 8px 16px;
+}
+
+/* ========================================
+   PRODUCT DETAIL PAGE
+======================================== */
+
+.detail-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/* Browsers give figure a default 40px side margin. Left in place it pushes the
+   photo and the details past 100% of the row, so they wrap instead of sitting
+   side by side once there is room for both. */
+.detail-layout figure {
+    margin: 0;
+}
+
+.detail-media {
+    flex: 1 1 100%;
+}
+
+.detail-info {
+    flex: 1 1 100%;
+}
+
+.detail-photo {
+    background-color: var(--shadow);
+    color: var(--ash);
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: 1px solid var(--ash);
+}
+
+.spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+.spec-table th,
+.spec-table td {
+    border: 1px solid var(--ash);
+    padding: 8px;
+    text-align: left;
+}
+
+.spec-table th {
+    background-color: var(--shadow);
+    color: var(--brass);
+    width: 40%;
+}
+
+/* ========================================
+   CART TABLE
+   ----------------------------------------
+   Wide tables get their own scroll container so the page body never scrolls
+   sideways on a phone.
+======================================== */
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 480px; /* Below this the columns become unreadable */
+}
+
+.cart-table th,
+.cart-table td {
+    border-bottom: 1px solid var(--ash);
+    padding: 10px 8px;
+    text-align: left;
+}
+
+.cart-table th {
+    color: var(--brass);
+    border-bottom: 2px solid var(--brass);
+}
+
+.cart-table tfoot td {
+    font-weight: bold;
+    color: var(--brass);
+    border-bottom: none;
+}
+
+.numeric {
+    text-align: right;
+    font-variant-numeric: tabular-nums; /* Digits line up in a column */
+}
+
+/* ========================================
+   FORMS
+======================================== */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 460px;
+}
+
+label {
+    color: var(--parchment);
+    margin-top: 10px;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid var(--ash);
+    border-radius: 4px;
+    background-color: var(--void);
+    color: var(--parchment);
+    font-family: inherit;
     font-size: 16px;
 }
 
-/* FOOTER */
-footer {
-    background-color: #2A2138;
-    border-top: 2px solid #E0B65C;
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--brass);
+    outline-offset: 1px;
+}
+
+fieldset {
+    border: 1px solid var(--ash);
+    border-radius: 6px;
+    margin: 0 0 20px 0;
+    padding: 12px 16px 20px 16px;
+}
+
+legend {
+    color: var(--brass);
+    font-weight: bold;
+    padding: 0 6px;
+}
+
+/* ========================================
+   PROCESS STEPS (About page)
+======================================== */
+
+.steps {
+    padding-left: 20px;
+}
+
+.steps h3 {
+    margin: 16px 0 4px 0;
+    font-size: 18px;
+}
+
+.steps p {
+    color: var(--ash);
+    margin: 0;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+    background-color: var(--shadow);
+    border-top: 2px solid var(--brass);
     text-align: center;
-    padding: 22px;
-    color: #B9AEC4;
+    padding: 22px 16px;
+    color: var(--ash);
     font-size: 14px;
+}
+
+.site-footer a {
+    color: var(--brass);
+}
+
+/* ========================================
+   TABLET (768px and up)
+======================================== */
+
+@media (min-width: 768px) {
+
+    .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 32px;
+    }
+
+    .logo {
+        margin: 0; /* No longer needs space below, nav sits beside it */
+        font-size: 24px;
+    }
+
+    main {
+        padding: 24px 32px 60px 32px;
+    }
+
+    .hero {
+        padding: 60px 32px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    /* Two products per row */
+    .product-card {
+        flex: 1 1 calc(50% - 10px);
+    }
+
+    /* Photo beside the details instead of above them */
+    .detail-media {
+        flex: 1 1 45%;
+    }
+
+    .detail-info {
+        flex: 1 1 45%;
+    }
+}
+
+/* ========================================
+   DESKTOP (1024px and up)
+======================================== */
+
+@media (min-width: 1024px) {
+
+    /* Caps the reading width so lines do not stretch across a wide monitor */
+    main,
+    .hero {
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    /* Three products per row */
+    .product-card {
+        flex: 1 1 calc(33.333% - 14px);
+    }
 }

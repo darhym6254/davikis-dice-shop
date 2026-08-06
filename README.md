@@ -113,6 +113,18 @@ Five weekly milestones matched to the SDC260 project schedule.
 
 | File | Purpose |
 |---|---|
-| `index.html` | Homepage prototype |
-| `styles.css` | Brand palette and layout |
+| `index.html` | Home. Featured sets and the way into the Shop |
+| `shop.html` | Full catalog, filter controls, and the Odd Dice section |
+| `product.html` | Product Detail, shown with the Swamp Witch set |
+| `about.html` | About and Process, how a set gets made |
+| `cart.html` | Cart with a running subtotal |
+| `checkout.html` | Shipping form and order summary |
+| `styles.css` | Brand theme and responsive layout for all six pages |
 | `README.md` | This file |
+
+## Status
+
+Week 1 is complete. Week 2 is in progress: all six pages from the site map now
+exist with semantic HTML, and the external stylesheet carries the brand theme
+plus breakpoints at 768px and 1024px. Filtering, the cart, and checkout are
+structural only, since those are weeks 3 and 4 on the roadmap.
